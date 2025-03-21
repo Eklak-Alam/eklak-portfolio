@@ -124,7 +124,7 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-start space-x-6 text-gray-700 text-2xl sm:text-3xl">
             <motion.a
               whileHover={{ scale: 1.3, color: "#000" }}
-              href="https://github.com"
+              href="https://github.com/Eklak-Alam"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -132,7 +132,7 @@ export default function Hero() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.3, color: "#0072b1" }}
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/eklak-alam-40ba632b5/"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -69,7 +69,7 @@ const Footer = () => {
           <h4 className="text-xl font-semibold text-white">Follow Me</h4>
           <div className="flex space-x-4 text-gray-400 text-2xl">
             <a
-              href="https://github.com/eklak"
+              href="https://github.com/Eklak-Alam"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-transform transform hover:scale-110"
@@ -77,7 +77,7 @@ const Footer = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/eklak"
+              href="https://www.linkedin.com/in/eklak-alam-40ba632b5/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-transform transform hover:scale-110"

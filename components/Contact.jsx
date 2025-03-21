@@ -46,15 +46,15 @@ const Contact = () => {
             </div>
             <div className="flex items-center text-gray-700">
               <FaPhoneAlt className="text-blue-500 mr-3" />
-              <span>+91 98765 43210</span>
+              <span>+91 7070XXXXXX</span>
             </div>
           </div>
 
           <div className="flex space-x-4">
-            <a href="https://github.com/eklak" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Eklak-Alam" target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-gray-600 hover:text-black text-2xl transition-colors" />
             </a>
-            <a href="https://linkedin.com/in/eklak" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/eklak-alam-40ba632b5/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-gray-600 hover:text-blue-700 text-2xl transition-colors" />
             </a>
           </div>
