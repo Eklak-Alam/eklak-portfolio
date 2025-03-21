@@ -140,7 +140,7 @@ export default function Hero() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.3, color: "#FF0000" }}
-              href="https://youtube.com"
+              href="git push -u origin main"
               target="_blank"
               rel="noopener noreferrer"
             >
