@@ -8,6 +8,7 @@ import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 import heroImg from "../assets/heroImg.jpg";
 
+
 export default function Hero() {
   const skills = [
     "HTML", "CSS", "JavaScript", "React", "Next.js", "TailwindCSS",
@@ -115,7 +116,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/cv.pdf"
+              href='resume.pdf'
               download
               className="border border-pink-500 text-pink-500 px-6 py-2 rounded-md text-sm font-medium hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-sm"
             >
