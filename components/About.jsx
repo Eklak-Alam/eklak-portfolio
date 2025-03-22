@@ -60,7 +60,7 @@ const About = () => {
             Hi, I'm Eklak Alam 👋
           </h3>
           <p className="text-gray-600 mb-4 leading-relaxed">
-            I’m a passionate Frontend Developer with experience in building responsive and interactive web applications using React, Next.js, and TailwindCSS. I enjoy crafting clean UI/UX with smooth animations using Framer Motion. On the backend, I work with Node.js and explore DevOps practices.
+          I’m a passionate Full-Stack Developer who loves building modern, responsive web applications. I specialize in frontend technologies like React.js, Next.js, and TailwindCSS, with a focus on clean UI/UX and smooth animations using Framer Motion. On the backend, I work with Java and Spring Boot to create powerful and scalable APIs. I’m a continuous learner, always exploring new technologies and tools to stay ahead in the ever-evolving world of web development.
           </p>
           <p className="text-gray-600 leading-relaxed">
             I'm also a content creator sharing my knowledge on web development and helping others grow in tech!

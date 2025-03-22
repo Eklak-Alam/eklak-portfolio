@@ -68,22 +68,19 @@ const Skills = () => {
           <SkillCard
             title="Backend"
             skills={[
-              { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+              { name: "Java", icon: <FaNodeJs className="text-green-600" /> },
               { name: "Spring Boot", icon: <FaJava className="text-orange-600" /> },
               { name: "Hibernate", icon: <FaDatabase /> },
               { name: "MySQL", icon: <FaDatabase /> },
-              { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+              { name: "JDBC", icon: <FaDatabase className="text-green-500" /> },
             ]}
           />
 
           {/* DevOps */}
           <SkillCard
-            title="DevOps & Cloud"
+            title="DevOps Basic"
             skills={[
-              { name: "AWS", icon: <FaAws className="text-yellow-500" /> },
               { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
-              { name: "Kubernetes", icon: <SiKubernetes className="text-blue-500" /> },
-              { name: "CI/CD", icon: <span>🔧</span> },
               { name: "Git/GitHub", icon: <FaGitAlt className="text-red-500" /> },
             ]}
           />

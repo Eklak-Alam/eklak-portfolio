@@ -97,29 +97,32 @@ export default function Hero() {
             transition={{ delay: 1 }}
             className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0"
           >
-            Frontend Developer | Backend Developer | DevOps Enthusiast
+            Frontend Developer | Backend Developer | DevOps Beginner
           </motion.p>
 
           {/* ====== CTA BUTTONS ====== */}
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-6">
             <motion.a
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="/resume.pdf"
               download
-              className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold shadow-md transition duration-300"
+              className="border border-blue-600 text-blue-600 px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
             >
               Download Resume
             </motion.a>
+
             <motion.a
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="/cv.pdf"
               download
-              className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold shadow-md transition duration-300"
+              className="border border-pink-500 text-pink-500 px-6 py-2 rounded-md text-sm font-medium hover:bg-pink-500 hover:text-white transition-all duration-300 shadow-sm"
             >
               Download CV
             </motion.a>
           </div>
-
+          
           {/* ====== SOCIAL LINKS ====== */}
           <div className="flex justify-center lg:justify-start space-x-6 text-gray-700 text-2xl sm:text-3xl">
             <motion.a
