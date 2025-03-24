@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
@@ -15,19 +16,19 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full px-4 py-20 bg-gradient-to-b from-white to-blue-50"
+      className="w-full px-4 py-20 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300 mt-10"
     >
       {/* Section Title */}
       <motion.h2
-        className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-16 leading-tight tracking-tight relative inline-block"
+        className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-16 leading-tight tracking-tight relative inline-block"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <span className="bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-400 dark:to-indigo-500 bg-clip-text text-transparent">
           Let's Connect!
         </span>
-        <p className="text-lg md:text-xl text-gray-500 font-medium mt-2">
+        <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 font-medium mt-2">
           Have a project or just want to say hello? Reach out!
         </p>
       </motion.h2>
@@ -36,27 +37,27 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Contact Info */}
         <motion.div
-          className="bg-white rounded-3xl shadow-xl p-10 flex flex-col justify-between space-y-10 border border-gray-100"
+          className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-10 flex flex-col justify-between space-y-10 border border-gray-100 dark:border-gray-700 transition-colors duration-300"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
           <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">
               Eklak Alam
             </h3>
-            <p className="text-gray-600 text-base">
+            <p className="text-gray-600 dark:text-gray-400 text-base">
               Full Stack Developer | Java | React | Spring Boot
             </p>
           </div>
 
-          <div className="space-y-4 text-gray-700 text-sm">
+          <div className="space-y-4 text-gray-700 dark:text-gray-300 text-sm">
             <div className="flex items-center">
-              <FaEnvelope className="text-blue-600 mr-3" size={18} />
+              <FaEnvelope className="text-blue-600 dark:text-blue-400 mr-3" size={18} />
               <span>eklakemail@gmail.com</span>
             </div>
             <div className="flex items-center">
-              <FaPhoneAlt className="text-blue-600 mr-3" size={18} />
+              <FaPhoneAlt className="text-blue-600 dark:text-blue-400 mr-3" size={18} />
               <span>+91 7070XXXXXX</span>
             </div>
           </div>
@@ -68,7 +69,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               aria-label="GitHub"
             >
-              <FaGithub className="text-gray-700 hover:text-black text-2xl transition-colors" />
+              <FaGithub className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white text-2xl transition-colors" />
             </a>
             <a
               href="https://www.linkedin.com/in/eklak-alam-40ba632b5/"
@@ -76,14 +77,14 @@ const Contact = () => {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <FaLinkedin className="text-gray-700 hover:text-blue-700 text-2xl transition-colors" />
+              <FaLinkedin className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 text-2xl transition-colors" />
             </a>
           </div>
         </motion.div>
 
         {/* Right Contact Form */}
         <motion.form
-          className="bg-white rounded-3xl shadow-xl p-10 space-y-6 border border-gray-100"
+          className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-10 space-y-6 border border-gray-100 dark:border-gray-700 transition-colors duration-300"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -96,7 +97,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-2">
             <label
               htmlFor="name"
-              className="text-gray-700 text-sm font-medium"
+              className="text-gray-700 dark:text-gray-300 text-sm font-medium"
             >
               Name
             </label>
@@ -105,7 +106,7 @@ const Contact = () => {
               id="name"
               required
               placeholder="Your Name"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm rounded-lg text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
             />
           </div>
 
@@ -113,7 +114,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-2">
             <label
               htmlFor="email"
-              className="text-gray-700 text-sm font-medium"
+              className="text-gray-700 dark:text-gray-300 text-sm font-medium"
             >
               Email
             </label>
@@ -122,7 +123,7 @@ const Contact = () => {
               id="email"
               required
               placeholder="you@example.com"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm rounded-lg text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
             />
           </div>
 
@@ -130,7 +131,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-2">
             <label
               htmlFor="message"
-              className="text-gray-700 text-sm font-medium"
+              className="text-gray-700 dark:text-gray-300 text-sm font-medium"
             >
               Message
             </label>
@@ -139,7 +140,7 @@ const Contact = () => {
               rows={5}
               required
               placeholder="What's on your mind?"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none transition resize-none"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm rounded-lg text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition resize-none"
             />
           </div>
 
@@ -148,7 +149,7 @@ const Contact = () => {
             type="submit"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all text-center text-sm md:text-base w-full"
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all text-center text-sm md:text-base w-full"
           >
             Send Message
           </motion.button>

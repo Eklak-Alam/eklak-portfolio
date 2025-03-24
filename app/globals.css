@@ -8,3 +8,21 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+:root {
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #1e1e1e;
+  --color-text-light: #121212;
+  --color-text-dark: #f5f5f5;
+}
+
+html.light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+html.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}

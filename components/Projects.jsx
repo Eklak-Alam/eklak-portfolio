@@ -36,19 +36,24 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full px-6 py-16 bg-gradient-to-b from-white to-blue-50">
+    <section
+      id="projects"
+      className="w-full px-6 py-16 bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] text-gray-800 dark:from-[#0f0f0f] dark:to-[#1f1f1f] dark:text-gray-100 transition-colors duration-500"
+    >
       {/* Section Title */}
       <motion.h2
-        className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-900 dark:text-white relative"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
-          My Projects
+        <span className="inline-block relative px-6 py-2">
+          <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+            My Projects
+          </span>
         </span>
         <motion.div
-          className="h-1 w-20 bg-blue-500 rounded-full mx-auto mt-3"
+          className="h-1 w-24 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto mt-4 shadow-md"
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           transition={{ duration: 0.4, delay: 0.3 }}
@@ -57,18 +62,18 @@ const Projects = () => {
       </motion.h2>
 
       {/* Projects Grid */}
-      <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-6xl mx-auto grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
-          key={project.id}
-          className="group bg-white rounded-xl shadow-lg hover:shadow-2xl overflow-hidden transition-shadow duration-300 flex flex-col"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.2 }}
-          viewport={{ once: true, amount: 0.2 }} // 👈 Add viewport config!
-        >        
+            key={project.id}
+            className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden transition-shadow duration-300 flex flex-col"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             {/* Image */}
-            <div className="relative w-full h-60 bg-gray-100 overflow-hidden">
+            <div className="relative w-full h-60 bg-gray-100 dark:bg-gray-700 overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
@@ -77,21 +82,23 @@ const Projects = () => {
             </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col flex-grow">
-              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 mb-2">
+            <div className="p-6 flex flex-col flex-grow">
+              {/* Title */}
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                 {project.title}
               </h3>
 
-              <p className="text-sm text-gray-600 mb-4 flex-grow">
+              {/* Description */}
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-5 flex-grow leading-relaxed">
                 {project.description}
               </p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {project.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="bg-blue-100 text-blue-700 text-xs font-medium px-2 py-1 rounded-full"
+                    className="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-800 dark:to-blue-900 text-blue-700 dark:text-blue-300 text-xs font-semibold px-3 py-1 rounded-full shadow-sm"
                   >
                     {tech}
                   </span>
@@ -99,14 +106,14 @@ const Projects = () => {
               </div>
 
               {/* Links */}
-              <div className="flex justify-between items-center border-t pt-3">
+              <div className="flex justify-between items-center pt-4 mt-auto border-t border-gray-200 dark:border-gray-700">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-800 transition-colors"
+                  className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
-                  <FaGithub className="text-base" />
+                  <FaGithub className="text-lg" />
                   Code
                 </a>
 
@@ -115,9 +122,9 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm text-blue-500 hover:text-blue-700 transition-colors"
+                    className="flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 transition-colors"
                   >
-                    <FaExternalLinkAlt className="text-base" />
+                    <FaExternalLinkAlt className="text-lg" />
                     Live
                   </a>
                 )}

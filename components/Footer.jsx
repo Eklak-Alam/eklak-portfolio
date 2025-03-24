@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gradient-to-b from-blue-900 to-black text-white">
+    <footer className="w-full bg-gradient-to-b from-blue-900 to-black text-white transition-colors">
       <motion.div
-        className="max-w-7xl mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0"
+        className="max-w-7xl mx-auto px-8 py-16 flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0 md:gap-10"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -22,7 +22,7 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <h3 className="text-3xl font-bold text-white">Eklak Alam</h3>
-          <p className="text-gray-400 text-sm">Full Stack Developer | Java | React | Nextjs | Spring Boot</p>
+          <p className="text-gray-400 text-sm">Full Stack Developer | Java | React | Next.js | Spring Boot</p>
         </motion.div>
 
         {/* Quick Links */}
@@ -34,10 +34,18 @@ const Footer = () => {
         >
           <h4 className="text-xl font-semibold text-white">Quick Links</h4>
           <ul className="space-y-2 text-gray-400">
-            <li className="hover:text-white transition-colors cursor-pointer"><Link href='/'>Home</Link></li>
-            <li className="hover:text-white transition-colors cursor-pointer"><Link href='/about'>About</Link></li>
-            <li className="hover:text-white transition-colors cursor-pointer"><Link href='/projects'>Projects</Link></li>
-            <li className="hover:text-white transition-colors cursor-pointer"><Link href='/contact'>Contact</Link></li>
+            <li>
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-white transition-colors">About</Link>
+            </li>
+            <li>
+              <Link href="/projects" className="hover:text-white transition-colors">Projects</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
+            </li>
           </ul>
         </motion.div>
 
@@ -49,14 +57,20 @@ const Footer = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <h4 className="text-xl font-semibold text-white">Contact</h4>
-          <div className="flex items-center text-gray-400">
+          <a
+            href="mailto:eklakalam420@gmail.com"
+            className="flex items-center text-gray-400 hover:text-white transition-colors"
+          >
             <FaEnvelope className="text-blue-400 mr-3" />
             <span>eklakalam420@gmail.com</span>
-          </div>
-          <div className="flex items-center text-gray-400">
+          </a>
+          <a
+            href="tel:+917070XXXXXX"
+            className="flex items-center text-gray-400 hover:text-white transition-colors"
+          >
             <FaPhoneAlt className="text-blue-400 mr-3" />
             <span>+91 7070XXXXXX</span>
-          </div>
+          </a>
         </motion.div>
 
         {/* Social Links */}
@@ -72,6 +86,7 @@ const Footer = () => {
               href="https://github.com/Eklak-Alam"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="hover:text-white transition-transform transform hover:scale-110"
             >
               <FaGithub />
@@ -80,6 +95,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/eklak-alam-40ba632b5/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="hover:text-white transition-transform transform hover:scale-110"
             >
               <FaLinkedin />
