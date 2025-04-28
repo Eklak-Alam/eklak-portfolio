@@ -1,24 +1,54 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin, FaPhoneAlt } from 'react-icons/fa';
+import emailjs from 'emailjs-com'; // Import EmailJS
 
 const Contact = () => {
   const [isClient, setIsClient] = useState(false);
+  const form = useRef(); // For form reference
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  if (!isClient) return null; // SSR prevention
+  if (!isClient) return null;
+
+  // Function to handle form submission
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        'service_m8xjldu', // Replace with your Service ID
+        'Ytemplate_81hm4zn', // Replace with your Template ID
+        form.current,
+        'ks97KAMEjoyIZlezQ' // Replace with your Public Key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setLoading(false);
+          setSuccessMessage('Message sent successfully!');
+          form.current.reset(); // Clear form
+        },
+        (error) => {
+          console.log(error.text);
+          setLoading(false);
+          setSuccessMessage('Failed to send message. Please try again!');
+        }
+      );
+  };
 
   return (
     <section
       id="contact"
       className="w-full px-4 py-20 bg-gradient-to-b from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300"
     >
-      {/* Section Title */}
       <motion.h2
         className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 dark:text-white mb-16 leading-tight tracking-tight relative inline-block"
         initial={{ opacity: 0, y: -40 }}
@@ -33,7 +63,6 @@ const Contact = () => {
         </p>
       </motion.h2>
 
-      {/* Contact Content */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Contact Info */}
         <motion.div
@@ -84,59 +113,48 @@ const Contact = () => {
 
         {/* Right Contact Form */}
         <motion.form
+          ref={form}
+          onSubmit={sendEmail}
           className="bg-white dark:bg-gray-900 rounded-3xl shadow-xl p-10 space-y-6 border border-gray-100 dark:border-gray-700 transition-colors duration-300"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          onSubmit={(e) => {
-            e.preventDefault();
-            alert('Thanks for reaching out! (Hook it up to your backend/email service)');
-          }}
         >
-          {/* Name Field */}
           <div className="flex flex-col space-y-2">
-            <label
-              htmlFor="name"
-              className="text-gray-700 dark:text-gray-300 text-sm font-medium"
-            >
+            <label htmlFor="name" className="text-gray-700 dark:text-gray-300 text-sm font-medium">
               Name
             </label>
             <input
               type="text"
               id="name"
+              name="name" // Name attribute required for EmailJS
               required
               placeholder="Your Name"
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm rounded-lg text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
             />
           </div>
 
-          {/* Email Field */}
           <div className="flex flex-col space-y-2">
-            <label
-              htmlFor="email"
-              className="text-gray-700 dark:text-gray-300 text-sm font-medium"
-            >
+            <label htmlFor="email" className="text-gray-700 dark:text-gray-300 text-sm font-medium">
               Email
             </label>
             <input
               type="email"
               id="email"
+              name="email" // Name attribute required for EmailJS
               required
               placeholder="you@example.com"
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-sm rounded-lg text-gray-700 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"
             />
           </div>
 
-          {/* Message Field */}
           <div className="flex flex-col space-y-2">
-            <label
-              htmlFor="message"
-              className="text-gray-700 dark:text-gray-300 text-sm font-medium"
-            >
+            <label htmlFor="message" className="text-gray-700 dark:text-gray-300 text-sm font-medium">
               Message
             </label>
             <textarea
               id="message"
+              name="message" // Name attribute required for EmailJS
               rows={5}
               required
               placeholder="What's on your mind?"
@@ -144,14 +162,20 @@ const Contact = () => {
             />
           </div>
 
-          {/* Submit Button */}
+          {successMessage && (
+            <p className="text-center text-sm text-green-600 dark:text-green-400">
+              {successMessage}
+            </p>
+          )}
+
           <motion.button
             type="submit"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all text-center text-sm md:text-base w-full"
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all text-center text-sm md:text-base w-full disabled:opacity-50"
+            disabled={loading}
           >
-            Send Message
+            {loading ? 'Sending...' : 'Send Message'}
           </motion.button>
         </motion.form>
       </div>

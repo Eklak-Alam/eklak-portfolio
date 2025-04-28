@@ -126,7 +126,10 @@ const Skills = () => {
           <SkillCard
             title="Learning Microservices"
             skills={[
-              { name: "Spring Cloud", icon: <FaJava className="text-red-500" /> },
+              {
+                name: "Spring Cloud",
+                icon: <FaJava className="text-red-500" />,
+              },
               { name: "Eureka", icon: <span>🧭</span> },
               { name: "API Gateway", icon: <span>🛡️</span> },
               { name: "Kafka", icon: <span>📨</span> },
