@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://eklak-portfolio.vercel.app/
+
+# Sitemaps
+Sitemap: https://eklak-portfolio.vercel.app/sitemap.xml
