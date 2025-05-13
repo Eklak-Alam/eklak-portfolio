@@ -9,28 +9,28 @@ const projects = [
     id: 1,
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio built with Next.js, TailwindCSS, and Framer Motion.',
-    image: 'https://designnotes.blog.gov.uk/wp-content/uploads/sites/53/2020/06/Portfolio-Desk.jpg',
-    github: 'https://github.com/eklak/portfolio',
-    live: 'https://eklakportfolio.com',
+    image: '/eklakportfolio.png',
+    github: 'https://github.com/Eklak-Alam/eklak-portfolio',
+    live: 'https://eklak-portfolio.vercel.app/',
     tech: ['Next.js', 'TailwindCSS', 'Framer Motion']
   },
   {
     id: 2,
-    title: 'Task Manager API',
-    description: 'A RESTful API for managing tasks, built with Node.js, Express, and MongoDB.',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDDvJrPXUDg4-cuZAWTFI1dQpcP8qmeoG3bA&s',
-    github: 'https://github.com/eklak/task-manager-api',
-    live: '',
-    tech: ['Node.js', 'Express', 'MongoDB']
+    title: 'Shanaya Training Institute Pvt Ltd',
+    description: 'A Static website for my client(Teacher).',
+    image: '/shanayaimg.png',
+    github: 'https://github.com/Eklak-Alam/LMS-Learning-management-system-',
+    live: 'https://shanayatraining.com/',
+    tech: ['Next js', 'Framer', 'TailwindCSS', 'etc...']
   },
   {
     id: 3,
-    title: 'LMS CodeE',
-    description: 'Full-stack E-Commerce application with shopping cart, authentication, and payment integration.',
-    image: 'https://s3.envato.com/files/409384063/Preview%20(2).__large_preview.jpg',
-    github: 'https://github.com/eklak/ecommerce',
-    live: 'https://eklakecommerce.com',
-    tech: ['React', 'Node.js', 'Stripe']
+    title: 'AI BG Removal',
+    description: 'Welcome to the Background Remover',
+    image: '/bgremoval.png',
+    github: 'https://github.com/Eklak-Alam/BGRemoval',
+    live: 'https://bg-removal-eklak.vercel.app/',
+    tech: ['React', 'Framer', 'TailwindCSS', 'Node.js']
   }
 ];
 
