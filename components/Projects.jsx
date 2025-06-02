@@ -23,7 +23,7 @@ const projects = [
     live: 'https://shanayatraining.com/',
     tech: ['Next js', 'Framer', 'TailwindCSS', 'etc...']
   },
-  {
+  { 
     id: 3,
     title: 'AI BG Removal',
     description: 'Welcome to the Background Remover',
@@ -31,6 +31,15 @@ const projects = [
     github: 'https://github.com/Eklak-Alam/BGRemoval',
     live: 'https://bg-removal-eklak.vercel.app/',
     tech: ['React', 'Framer', 'TailwindCSS', 'Node.js']
+  },
+  { 
+    id: 4,
+    title: 'Blix Media',
+    description: 'A modern website for my client startup.',
+    image: '/blixmedia.png',
+    github: 'https://github.com/Eklak-Alam/Blix-Media',
+    live: 'https://project-psi-ivory-35.vercel.app/',
+    tech: ['Next js', 'Framer', 'TailwindCSS', 'Node.js', 'Aceternity ui', 'etc...']
   }
 ];
 
