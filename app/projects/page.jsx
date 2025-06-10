@@ -40,6 +40,15 @@ const projects = [
     github: 'https://github.com/Eklak-Alam/Blix-Media',
     live: 'https://project-psi-ivory-35.vercel.app/',
     tech: ['Next js', 'Framer', 'TailwindCSS', 'Node.js', 'Aceternity ui', 'etc...']
+  },
+  { 
+    id: 4,
+    title: 'Deaf Link',
+    description: 'Deaf link for the deaf people to lister every words sentences.',
+    image: '/deaflink.png',
+    github: 'https://github.com/Eklak-Alam/DeafLink',
+    live: 'https://www.deaflink.co/',
+    tech: ['Next js', 'Framer', 'TailwindCSS', 'Node.js', 'Aceternity ui', 'etc...']
   }
 ];
 
