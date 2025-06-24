@@ -49,6 +49,15 @@ const projects = [
     github: 'https://github.com/Eklak-Alam/DeafLink',
     live: 'https://www.deaflink.co/',
     tech: ['Next js', 'Framer', 'TailwindCSS', 'Node.js', 'Aceternity ui', 'etc...']
+  },
+  { 
+    id: 5,
+    title: 'Balaji Shikshan Sansthan Samiti',
+    description: 'Balaji Shikshan Sansthan Samiti - Providing Pre-License Training courses in India',
+    image: '/balaji.png',
+    github: 'https://github.com/Eklak-Alam/Training-Project-With-Certificate-Generate-Frontend-Code',
+    live: 'https://lic-one.vercel.app/',
+    tech: ['Next js', 'Framer', 'TailwindCSS', 'Node.js', 'Spring Boot', 'MYSQL', 'etc...']
   }
 ];
 
